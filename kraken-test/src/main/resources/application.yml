@@ -1,0 +1,20 @@
+---
+micronaut:
+    application:
+        name: kraken-test
+
+---
+micronaut:
+    metrics:
+        enabled: true
+        export:
+            prometheus:
+                enabled: true
+                step: PT1M
+                descriptions: true
+---
+tracing:
+  jaeger:
+    enabled: true
+    sampler:
+      probability: 0.1
